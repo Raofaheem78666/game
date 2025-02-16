@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    margin: 0;
+}
+
+.solar-system {
+    position: relative;
+}
+
+.sun {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border-radius: 50%;
+    box-shadow: 0 0 50px rgba(255, 255, 0, 0.8);
+}
+
+.moon-orbit {
+    position: absolute;
+    width: 300px; /* Diameter of the orbit */
+    height: 300px; /* Diameter of the orbit */
+    border: 1px dashed rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    animation: rotate 10s linear infinite; /* Rotate the orbit */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.moon {
+    width: 30px;
+    height: 30px;
+    background-color: gray;
+    border-radius: 50%;
+    position: absolute;
+    top: 0; /* Start at the top of the orbit */
+}
+
+@keyframes rotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
